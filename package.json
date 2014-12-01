@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/kevinswiber/revolt-json-parser/issues"
   },
-  "homepage": "https://github.com/kevinswiber/revolt-json-parser"
+  "homepage": "https://github.com/kevinswiber/revolt-json-parser",
+  "dependencies": {
+    "rx": "^2.3.18"
+  }
 }
