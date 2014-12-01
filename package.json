@@ -1,0 +1,24 @@
+{
+  "name": "revolt-json-parser",
+  "version": "0.0.0",
+  "description": "Parses response bodies to JSON.",
+  "main": "parser.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "revolt",
+    "json",
+    "parser"
+  ],
+  "author": "Kevin Swiber <kswiber@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kevinswiber/revolt-json-parser.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kevinswiber/revolt-json-parser/issues"
+  },
+  "homepage": "https://github.com/kevinswiber/revolt-json-parser"
+}
