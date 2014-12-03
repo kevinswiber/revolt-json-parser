@@ -35,13 +35,17 @@ module.exports = function(handle) {
           }, { length: 0, buffers: [] })
           .map(function(body) {
             var body = Buffer.concat(body.buffers, body.length);
-            env.response.body = JSON.parse(body.toString());
+            if (body.length) {
+              env.response.body = JSON.parse(body.toString());
+            }
             return env;
           })
       } else if (typeof env.response.body === 'string') {
-        return Rx.Observable.fromArray([JSON.parse(env.response.body)]);
+        var body = env.response.body.length ? JSON.parse(env.response.body) : null;
+        return Rx.Observable.fromArray([body]);
       } else if (env.response.body instanceof Buffer) {
-        return Rx.Observable.fromArray([JSON.parse(env.response.body.toString())]);
+        var body = env.response.body.length ? JSON.parse(env.response.body.toString()) : null;
+        return Rx.Observable.fromArray([body]);
       }
     });
   });
