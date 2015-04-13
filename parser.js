@@ -1,5 +1,6 @@
 var Stream = require('stream');
 var Rx = require('rx');
+Rx.Node = require('rx-node');
 
 module.exports = function(handle) {
   handle('response', function(pipeline) {
